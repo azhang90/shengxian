@@ -18,6 +18,15 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+
     url('^user',include('user.urls')),
     url('^book',include('book.urls')),
+
+    url('^user/',include('users.urls')),
+    url('^',include('goods.urls')),
+    url('^cart/',include('cart.urls')),
+    url('^order/',include('orders.urls')),
+    url(r'^tinymce/', include('tinymce.urls')),
+    # url(r'^search/',include('haystack.urls')),
+
 ]
